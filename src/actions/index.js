@@ -25,8 +25,6 @@ export const signIn = userInfo => async dispatch => {
     try {
         const resp = await axios.post('http://api.reactprototypes.com/signin', userInfo);
 
-        console.log('Sign In Response:', resp);
-
         localStorage.setItem('token', resp.data.token);
 
         dispatch({
